@@ -66,7 +66,6 @@ Este proyecto es un MVP de un juego tipo “Preguntados” donde varios usuarios
 | 12 | Como jugador, quiero filtrar preguntas por categorías sugeridas por IA. | Usar IA para sugerir y filtrar preguntas según intereses del usuario. | Baja | 2 pts | 4 | - El sistema sugiere categorías relevantes usando IA.<br>- Filtrado eficiente.<br>- Personalización por usuario. | - Seleccionar intereses y verificar sugerencias.<br>- Validar filtrado. | 🧠 |
 | 13 | Como administrador, quiero revisar reportes de preguntas inapropiadas. | Permitir a administradores revisar y gestionar reportes. | Baja | 2 pts | 7 | - El administrador puede ver y resolver reportes.<br>- Gestión eficiente.<br>- Cambios reflejados en el juego. | - Reportar pregunta y verificar gestión.<br>- Validar resolución. | 📝 |
 | 14 | Como jugador, quiero ver el tiempo restante para responder cada pregunta. | Mostrar tiempo restante para cada pregunta. | Baja | 1 pt | 3 | - El usuario ve un temporizador en cada pregunta.<br>- Temporizador preciso.<br>- Notificación al finalizar tiempo. | - Verificar temporizador en la interfaz.<br>- Simular expiración de tiempo. | 📝 |
-
 | 15 | Como jugador, quiero ver el resumen de la partida al finalizar. | Mostrar resumen de resultados al terminar la partida. | Baja | 1 pt | 3,8 | - El usuario ve puntajes, respuestas y ranking final.<br>- Resumen claro y completo.<br>- Acceso al historial. | - Finalizar partida y verificar resumen.<br>- Validar acceso al historial. | 📝 |
 
 ---
