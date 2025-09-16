@@ -23,18 +23,19 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 
 ## Historias de Usuario (Formato Connextra)
 1. Como usuario nuevo, quiero registrarme para poder participar en partidas.
-2. Como jugador, quiero unirme a partidas multijugador para competir con otros.
-3. Como jugador, quiero responder preguntas para probar mis conocimientos.
-4. Como sistema, quiero almacenar preguntas y partidas en una base de datos no relacional para escalabilidad.
-5. Como usuario, quiero ver mi historial y estadísticas para medir mi progreso.
-6. Como administrador, quiero agregar/modificar preguntas para mantener el juego actualizado.
-7. Como jugador, quiero ver el ranking en tiempo real para saber mi posición.
-8. Como usuario, quiero recibir retroalimentación después de las respuestas.
-9. Como jugador, quiero invitar amigos a partidas privadas.
-10. Como usuario, quiero recuperar mi contraseña si la olvido.
-11. Como jugador, quiero filtrar preguntas por categorías.
-12. Como jugador, quiero ver el tiempo restante para responder cada pregunta.
-13. Como jugador, quiero ver el resumen de la partida al finalizar.
+2. Como jugador, quiero iniciar sesión para acceder a mis partidas.
+3. Como jugador, quiero unirme a partidas públicas o privadas para competir con otros jugadores.
+4. Como jugador, quiero responder preguntas para probar mis conocimientos.
+5. Como sistema, quiero almacenar preguntas y partidas en una base de datos no relacional para escalabilidad.
+6. Como usuario, quiero ver mi historial y estadísticas para medir mi progreso.
+7. Como administrador, quiero gestionar las preguntas para mantener el juego actualizado.
+8. Como jugador, quiero ver el ranking en tiempo real para saber mi posición.
+9. Como usuario, quiero recibir retroalimentación después de las respuestas.
+10. Como jugador, quiero invitar amigos a partidas privadas.
+11. Como usuario, quiero recuperar mi contraseña si la olvido.
+12. Como jugador, quiero filtrar preguntas por categorías.
+13. Como jugador, quiero ver el tiempo restante para responder cada pregunta.
+14. Como jugador, quiero ver el resumen de la partida al finalizar.
 
 ## Product Backlog y Release Plan
 
@@ -51,14 +52,14 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 |----|----------|-------------|-----------|------------|--------------|------------------------|-------------------|----|
 | 1 | Como usuario nuevo, quiero registrarme para poder participar en partidas. | Permitir que nuevos usuarios creen una cuenta. | Alta | 2 pts | Ninguna | - El usuario puede registrarse con email y contraseña.<br>- El email no está repetido.<br>- Se envía confirmación de registro.<br>- El registro es seguro y cumple RGPD. | - Intentar registrar con email existente (debe fallar).<br>- Registrar usuario nuevo (debe funcionar). | 📝 |
 | 2 | Como jugador, quiero iniciar sesión para acceder a mis partidas. | Permitir que los usuarios inicien sesión. | Alta | 2 pts | 1 | - El usuario puede iniciar sesión con email y contraseña.<br>- Se valida credenciales.<br>- Sesión segura y persistente. | - Iniciar sesión con credenciales incorrectas (debe fallar).<br>- Iniciar sesión con credenciales correctas (debe funcionar). | 📝 |
-| 3 | Como jugador, quiero crear y unirme a partidas multijugador para competir con otros. | Permitir que los usuarios creen partidas y se unan otros jugadores. | Alta | 3 pts | 2 | - El usuario puede crear una partida.<br>- Otros usuarios pueden unirse.<br>- Se gestiona el estado de la partida. | - Crear partida y verificar que otros pueden unirse.<br>- Simular flujo de partida. | 📝 |
+| 3 | Como jugador, quiero crear y unirme a partidas públicas o privadas para competir con otros. | Permitir que los usuarios creen partidas públicas o privadas y que otros jugadores puedan unirse. | Alta | 3 pts | 2 | - El usuario puede crear una partida pública o privada.<br>- Otros usuarios pueden unirse.<br>- Se gestiona el estado de la partida (espera, en curso, finalizada). | - Crear partida pública o privada y verificar que otros pueden unirse.<br>- Simular flujo de partida. | 📝 |
 | 4 | Como jugador, quiero responder preguntas para probar mis conocimientos. | Consumir preguntas almacenadas en la base de datos que fueron creadas por el administrador. | Alta | 5 pts | 3 | - El jugador recibe preguntas con sus opciones de respuesta. <br>- Se valida la respuesta seleccionada y se informa si es correcta o incorrecta. <br>- Las preguntas provienen del banco gestionado por el administrador. | - El sistema muestre una pregunta con sus opciones al iniciar la partida..<br>-Confirmar que, al responder, el sistema indique si fue correcta o incorrectad. | 🧠 |
 | 5 | Como sistema, quiero almacenar usuarios, partidas y preguntas en Firebase para escalabilidad. | Guardar usuarios, partidas y preguntas en Firebase. | Alta | 3 pts | 1,3,4 | - Los datos se guardan y recuperan correctamente.<br>- Integridad y consistencia de datos.<br>- Escalabilidad comprobada. | - Crear, leer, actualizar y borrar datos.<br>- Pruebas de carga. | 📝 |
 | 6 | Como jugador, quiero ver mi historial y estadísticas para medir mi progreso. | Mostrar a los usuarios su historial y estadísticas. | Media | 2 pts | 2,5 | - El usuario puede ver partidas jugadas y estadísticas.<br>- Datos actualizados en tiempo real.<br>- Visualización clara. | - Jugar partidas y verificar historial.<br>- Validar estadísticas. | 📝 |
-| 7 | Como administrador, quiero agregar/modificar preguntas para mantener el juego actualizado. | Permitir a administradores agregar/modificar preguntas manualmente. | Media | 2 pts | 5 | - El administrador puede crear, editar y borrar preguntas.<br>- Validación de contenido.<br>- Cambios reflejados en el juego. | - Agregar y modificar preguntas desde el panel.<br>- Verificar actualización en partidas. | 📝 |
+| 7 | Como administrador, quiero gestionar preguntas para mantener el juego actualizado. | Permitir a administradores crear, editar y eliminar preguntas. | Media | 2 pts | 5 | - El administrador puede crear, editar y borrar preguntas.<br>- Validación de contenido.<br>- Cambios reflejados en el juego. | - Agregar y modificar preguntas desde el panel.<br>- Verificar actualización en partidas. | 📝 |
 | 8 | Como jugador, quiero ver el ranking en tiempo real para saber mi posición. | Calcular y mostrar puntajes y posiciones de los jugadores. | Media | 2 pts | 3,5 | - El sistema actualiza puntajes en tiempo real.<br>- El ranking se muestra correctamente.<br>- Actualización automática. | - Simular partidas y verificar ranking.<br>- Validar actualización. | 📝 |
-| 9 | Como usuario, quiero recibir retroalimentación después de las respuestas. | Dar feedback inmediato sobre respuestas correctas/incorrectas. | Media | 3 pts | 4 | - El sistema explica por qué una respuesta es correcta o incorrecta.<br>- Feedback relevante y claro.<br>- Las explicaciones se guardan en la base de datos al crear la pregunta. | - Responder preguntas y verificar feedback.<br>- Validar explicaciones. | 🧠 |
-| 10 | Como jugador, quiero invitar amigos a partidas privadas. | Permitir invitar amigos a partidas privadas. | Baja | 2 pts | 3 | - El usuario puede invitar amigos.<br>- Invitación por enlace o email.<br>- Acceso seguro. | - Invitar y verificar acceso.<br>- Validar privacidad. | 📝 |
+| 9 | Como usuario, quiero recibir retroalimentación después de responder. | Mostrar si la respuesta fue correcta o incorrecta y la opción correcta. | Media | 3 pts | 4 | - El sistema explica por qué una respuesta es correcta o incorrecta.<br>- Feedback relevante y claro.<br>- Las explicaciones se guardan en la base de datos al crear la pregunta. | - Responder preguntas y verificar feedback.<br>- Validar explicaciones. | 🧠 |
+| 10 | Como jugador, quiero invitar amigos a partidas privadas. | Permitir invitar amigos mediante enlace o código único para partidas privadas. | Baja | 2 pts | 3 | - El usuario puede invitar amigos.<br>- Invitación por enlace o email.<br>- Acceso seguro. | - Invitar y verificar acceso.<br>- Validar privacidad. | 📝 |
 | 11 | Como usuario, quiero recuperar mi contraseña si la olvido. | Permitir a los usuarios recuperar su contraseña. | Baja | 1 pt | 1 | - El usuario puede solicitar recuperación.<br>- Recibe instrucciones por email.<br>- Seguridad en el proceso. | - Solicitar recuperación y verificar email recibido.<br>- Intentar recuperación con email no registrado. | 📝 |
 | 12 | Como jugador, quiero filtrar preguntas por categorías. | Filtrar preguntas según intereses del usuario. | Baja | 2 pts | 4 | - El sistema sugiere categorías relevantes.<br>- Filtrado eficiente.<br>- Personalización por usuario. | - Seleccionar intereses y verificar sugerencias.<br>- Validar filtrado. | 🧠 |
 | 13 | Como jugador, quiero ver el tiempo restante para responder cada pregunta. | Mostrar tiempo restante para cada pregunta. | Baja | 1 pt | 3 | - El usuario ve un temporizador en cada pregunta.<br>- Temporizador preciso.<br>- Notificación al finalizar tiempo. | - Verificar temporizador en la interfaz.<br>- Simular expiración de tiempo. | 📝 |
