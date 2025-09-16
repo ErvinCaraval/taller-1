@@ -53,7 +53,7 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 | 1 | Como usuario nuevo, quiero registrarme para poder participar en partidas. | Permitir que nuevos usuarios creen una cuenta. | Alta | 2 pts | Ninguna | - El usuario puede registrarse con email y contraseña.<br>- El email no está repetido.<br>- Se envía confirmación de registro.<br>- El registro es seguro y cumple RGPD. | - Intentar registrar con email existente (debe fallar).<br>- Registrar usuario nuevo (debe funcionar). | 📝 |
 | 2 | Como jugador, quiero iniciar sesión para acceder a mis partidas. | Permitir que los usuarios inicien sesión. | Alta | 2 pts | 1 | - El usuario puede iniciar sesión con email y contraseña.<br>- Se valida credenciales.<br>- Sesión segura y persistente. | - Iniciar sesión con credenciales incorrectas (debe fallar).<br>- Iniciar sesión con credenciales correctas (debe funcionar). | 📝 |
 | 3 | Como jugador, quiero crear y unirme a partidas públicas o privadas para competir con otros. | Permitir que los usuarios creen partidas públicas o privadas y que otros jugadores puedan unirse. | Alta | 3 pts | 2 | - El usuario puede crear una partida pública o privada.<br>- Otros usuarios pueden unirse.<br>- Se gestiona el estado de la partida (espera, en curso, finalizada). | - Crear partida pública o privada y verificar que otros pueden unirse.<br>- Simular flujo de partida. | 📝 |
-| 4 | Como jugador, quiero responder preguntas para probar mis conocimientos. | Consumir preguntas almacenadas en la base de datos que fueron creadas por el administrador. | Alta | 5 pts | 3 | - El jugador recibe preguntas con sus opciones de respuesta. <br>- Se valida la respuesta seleccionada y se informa si es correcta o incorrecta. <br>- Las preguntas provienen del banco gestionado por el administrador. | - El sistema muestre una pregunta con sus opciones al iniciar la partida..<br>-Confirmar que, al responder, el sistema indique si fue correcta o incorrectad. | 🧠 |
+| 4 | Como jugador, quiero responder preguntas para probar mis conocimientos. | Consumir preguntas almacenadas en la base de datos que fueron creadas por el administrador. | Alta | 5 pts | 3 | - El jugador recibe preguntas con sus opciones de respuesta. <br>- Se valida la respuesta seleccionada y se informa si es correcta o incorrecta. <br>- Las preguntas provienen del banco gestionado por el administrador. | - El sistema muestre una pregunta con sus opciones al iniciar la partida.<br>-Confirmar que, al responder, el sistema indique si fue correcta o incorrecta. | 📝 |
 | 5 | Como sistema, quiero almacenar usuarios, partidas y preguntas en Firebase para escalabilidad. | Guardar usuarios, partidas y preguntas en Firebase. | Alta | 3 pts | 1,3,4 | - Los datos se guardan y recuperan correctamente.<br>- Integridad y consistencia de datos.<br>- Escalabilidad comprobada. | - Crear, leer, actualizar y borrar datos.<br>- Pruebas de carga. | 📝 |
 | 6 | Como jugador, quiero ver mi historial y estadísticas para medir mi progreso. | Mostrar a los usuarios su historial y estadísticas. | Media | 2 pts | 2,5 | - El usuario puede ver partidas jugadas y estadísticas.<br>- Datos actualizados en tiempo real.<br>- Visualización clara. | - Jugar partidas y verificar historial.<br>- Validar estadísticas. | 📝 |
 | 7 | Como administrador, quiero gestionar preguntas para mantener el juego actualizado. | Permitir a administradores crear, editar y eliminar preguntas. | Media | 2 pts | 5 | - El administrador puede crear, editar y borrar preguntas.<br>- Validación de contenido.<br>- Cambios reflejados en el juego. | - Agregar y modificar preguntas desde el panel.<br>- Verificar actualización en partidas. | 📝 |
@@ -61,14 +61,14 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 | 9 | Como usuario, quiero recibir retroalimentación después de responder. | Mostrar si la respuesta fue correcta o incorrecta y la opción correcta. | Media | 3 pts | 4 | - El sistema explica por qué una respuesta es correcta o incorrecta.<br>- Feedback relevante y claro.<br>- Las explicaciones se guardan en la base de datos al crear la pregunta. | - Responder preguntas y verificar feedback.<br>- Validar explicaciones. | 🧠 |
 | 10 | Como jugador, quiero invitar amigos a partidas privadas. | Permitir invitar amigos mediante enlace o código único para partidas privadas. | Baja | 2 pts | 3 | - El usuario puede invitar amigos.<br>- Invitación por enlace o email.<br>- Acceso seguro. | - Invitar y verificar acceso.<br>- Validar privacidad. | 📝 |
 | 11 | Como usuario, quiero recuperar mi contraseña si la olvido. | Permitir a los usuarios recuperar su contraseña. | Baja | 1 pt | 1 | - El usuario puede solicitar recuperación.<br>- Recibe instrucciones por email.<br>- Seguridad en el proceso. | - Solicitar recuperación y verificar email recibido.<br>- Intentar recuperación con email no registrado. | 📝 |
-| 12 | Como jugador, quiero filtrar preguntas por categorías. | Filtrar preguntas según intereses del usuario. | Baja | 2 pts | 4 | - El sistema sugiere categorías relevantes.<br>- Filtrado eficiente.<br>- Personalización por usuario. | - Seleccionar intereses y verificar sugerencias.<br>- Validar filtrado. | 🧠 |
+| 12 | Como jugador, quiero filtrar preguntas por categorías. | Filtrar preguntas según intereses del usuario. | Baja | 2 pts | 4 | - El sistema permite filtrar preguntas por categorías.<br>- Filtrado eficiente.<br>- Personalización por usuario. | - Seleccionar intereses y verificar sugerencias.<br>- Validar filtrado. | 📝 |
 | 13 | Como jugador, quiero ver el tiempo restante para responder cada pregunta. | Mostrar tiempo restante para cada pregunta. | Baja | 1 pt | 3 | - El usuario ve un temporizador en cada pregunta.<br>- Temporizador preciso.<br>- Notificación al finalizar tiempo. | - Verificar temporizador en la interfaz.<br>- Simular expiración de tiempo. | 📝 |
 | 14 | Como jugador, quiero ver el resumen de la partida al finalizar. | Mostrar resumen de resultados al terminar la partida. | Baja | 1 pt | 3,8 | - El usuario ve puntajes, respuestas y ranking final.<br>- Resumen claro y completo.<br>- Acceso al historial. | - Finalizar partida y verificar resumen.<br>- Validar acceso al historial. | 📝 |
 
 ---
 
 
-## Release Plan Detallado Mejorado
+## Release Plan Detallado Optimizado
 
 ### Día 0: 16 de septiembre de 2025 (Inicio del equipo)
 
@@ -78,26 +78,29 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 
 **Sprint 2 (19-22 sept):**
 - Creación y unión a partidas multijugador (ID 3)
-- Generación dinámica de preguntas usando IA (ID 4)
+- Implementación de preguntas y respuestas (ID 4)
+- Recuperación de contraseña (ID 11)
 
 **Sprint 3 (23-25 sept):**
 - Panel de administración para preguntas (ID 7)
 - Sistema de puntuación y ranking (ID 8)
 - Historial de partidas y estadísticas personales (ID 6)
+- Invitar amigos a partidas privadas (ID 10)
 
 **Sprint 4 (26-28 sept):**
 - Retroalimentación automática sobre respuestas (IA) (ID 9)
-- Filtrado inteligente de preguntas por categorías (IA) (ID 12)
+- Filtrado de preguntas por categorías (ID 12)
 - Revisión de reportes de preguntas inapropiadas (ID 13)
-- Invitar amigos a partidas privadas (ID 10)
-- Recuperación de contraseña (ID 11)
+- Tiempo límite para responder preguntas (ID 14)
 
 **Sprint 5 (29-30 sept):**
-- Tiempo límite para responder preguntas (ID 14)
 - Resumen de partida al finalizar (ID 15)
 - Pruebas finales, integración, mejoras y documentación
 
 **Entrega final:** 30 de septiembre de 2025
+
+**Justificación de la redistribución:**
+Se ha redistribuido la carga de trabajo para evitar la acumulación de tareas en el último sprint y lograr un flujo más equilibrado. Las tareas de menor complejidad y dependencias (como recuperación de contraseña e invitación a partidas privadas) se han adelantado a sprints anteriores. El sprint 4 ahora incluye tareas de lógica y experiencia de usuario, mientras que el sprint 5 se reserva para el cierre, pruebas e integración. Esta nueva distribución mejora la eficiencia del equipo, reduce riesgos de sobrecarga al final y permite una mejor validación continua del producto.
 ---
 
 ## Uso de IA en el Proceso
@@ -113,9 +116,10 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 
 
 ## Prompts Utilizados con IA y Documentación de Interacciones
-### 4. Mejorar el Release Plan para balancear sprints
+
+### 4. Optimización Profesional del Release Plan
 **Prompt:**
-> El Release Plan actual tiene un último sprint muy cargado. Reorganiza las historias de usuario y tareas para que la carga de trabajo esté mejor distribuida entre los sprints, manteniendo las fechas originales de inicio y fin de cada sprint. Explica brevemente los cambios realizados y justifica la nueva distribución.
+> Como experto en gestión ágil de proyectos, analiza el Release Plan actual y detecta posibles desequilibrios en la carga de trabajo entre los sprints. Propón una redistribución profesional de las historias de usuario y tareas, asegurando que la carga sea equitativa y que se respeten las fechas originales de inicio y fin de cada sprint. Justifica brevemente los cambios realizados y explica cómo la nueva distribución mejora la eficiencia y el flujo de trabajo del equipo.
 **Tiempo empleado:** 2 minutos
 
 
@@ -131,10 +135,31 @@ Para garantizar la trazabilidad y transparencia en el uso de IA durante el desar
 > Analiza y refina las historias de usuario del backlog para asegurar que sean claras, concisas y cumplan el formato Connextra. Sugiere mejoras en redacción, criterios de aceptación y pruebas sugeridas.
 **Tiempo empleado:** 3 minutos
 
+
 ### 3. Sugerir Tareas Técnicas
 **Prompt:**
 > A partir del Product Backlog y las historias de usuario refinadas, sugiere las tareas técnicas necesarias para implementar cada historia. Incluye tareas de backend, frontend, integración con base de datos no relacional y uso de IA donde aplique.
 **Tiempo empleado:** 3 minutos
+
+#### Tareas técnicas sugeridas por historia de usuario
+
+| ID | Tareas técnicas principales |
+|----|----------------------------|
+| 1  | Backend: API de registro de usuario, validación de email, almacenamiento seguro en base no relacional.<br>Frontend: Formulario de registro, validación de campos, mensajes de error y éxito.<br>Integración: Conexión con base de datos (Firebase/MongoDB). |
+| 2  | Backend: API de autenticación, gestión de sesiones, validación de credenciales.<br>Frontend: Formulario de login, manejo de sesiones, feedback de autenticación.<br>Integración: Persistencia de sesión y tokens. |
+| 3  | Backend: Endpoints para crear y unirse a partidas, lógica de salas públicas/privadas.<br>Frontend: UI para crear/unirse a partidas, visualización de estado de la sala.<br>Integración: Sincronización en tiempo real de estado de partidas. |
+| 4  | Backend: API para servir preguntas, lógica de validación de respuestas.<br>Frontend: UI de preguntas y opciones, feedback inmediato.<br>Integración: Consumo de preguntas desde base de datos. |
+| 5  | Backend: Modelos y endpoints CRUD para usuarios, partidas y preguntas.<br>Integración: Configuración y pruebas de escalabilidad en base no relacional. |
+| 6  | Backend: Endpoints para historial y estadísticas.<br>Frontend: Visualización de historial y estadísticas.<br>Integración: Consultas agregadas a la base de datos. |
+| 7  | Backend: API para gestión de preguntas (crear, editar, eliminar).<br>Frontend: Panel de administración.<br>Integración: Validación y actualización en base de datos. |
+| 8  | Backend: Lógica de cálculo de ranking y puntajes.<br>Frontend: UI de ranking en tiempo real.<br>Integración: Actualización automática de datos. |
+| 9  | Backend: Lógica de feedback y explicación de respuestas.<br>Frontend: Mensajes de retroalimentación.<br>Integración: Almacenamiento de explicaciones.<br>IA: Generación automática de feedback. |
+| 10 | Backend: Generación y validación de enlaces/códigos de invitación.<br>Frontend: UI para invitar y unirse mediante enlace/código.<br>Integración: Seguridad en el acceso a partidas privadas. |
+| 11 | Backend: Endpoint para recuperación de contraseña, envío de email.<br>Frontend: Formulario de recuperación.<br>Integración: Validación de usuario y flujo seguro. |
+| 12 | Backend: Lógica de filtrado de categorías.<br>Frontend: UI de selección y filtrado.<br>Integración: Personalización por usuario. |
+| 13 | Frontend: Temporizador visual en preguntas.<br>Backend: Lógica de expiración de tiempo.<br>Integración: Notificación y control de flujo. |
+| 14 | Backend: Generación de resumen de partida.<br>Frontend: UI de resumen y acceso a historial.<br>Integración: Consulta y visualización de resultados. |
+
 
 ---
 
