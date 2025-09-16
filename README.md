@@ -67,8 +67,8 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 
 ---
 
-## Release Plan Detallado
 
+## Release Plan Detallado Mejorado
 
 ### Día 0: 16 de septiembre de 2025 (Inicio del equipo)
 
@@ -89,12 +89,11 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 - Retroalimentación automática sobre respuestas (IA) (ID 9)
 - Filtrado inteligente de preguntas por categorías (IA) (ID 12)
 - Revisión de reportes de preguntas inapropiadas (ID 13)
-
-**Sprint 5 (29-30 sept):**
 - Invitar amigos a partidas privadas (ID 10)
 - Recuperación de contraseña (ID 11)
+
+**Sprint 5 (29-30 sept):**
 - Tiempo límite para responder preguntas (ID 14)
-- Resumen de partida al finalizar (ID 15)
 - Resumen de partida al finalizar (ID 15)
 - Pruebas finales, integración, mejoras y documentación
 
@@ -112,7 +111,13 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 - Entregar el MVP funcional y la documentación en el repositorio.
 
 
+
 ## Prompts Utilizados con IA y Documentación de Interacciones
+### 4. Mejorar el Release Plan para balancear sprints
+**Prompt:**
+> El Release Plan actual tiene un último sprint muy cargado. Reorganiza las historias de usuario y tareas para que la carga de trabajo esté mejor distribuida entre los sprints, manteniendo las fechas originales de inicio y fin de cada sprint. Explica brevemente los cambios realizados y justifica la nueva distribución.
+**Tiempo empleado:** 2 minutos
+
 
 Para garantizar la trazabilidad y transparencia en el uso de IA durante el desarrollo, se documentan los prompts empleados, su propósito y el tiempo estimado de interacción.
 
