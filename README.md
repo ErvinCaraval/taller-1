@@ -111,8 +111,45 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 - Documentar el diseño, decisiones técnicas y lecciones aprendidas.
 - Entregar el MVP funcional y la documentación en el repositorio.
 
-## Ejemplo de Prompt para IA
+
+## Prompts Utilizados con IA y Documentación de Interacciones
+
+Para garantizar la trazabilidad y transparencia en el uso de IA durante el desarrollo, se documentan los prompts empleados, su propósito y el tiempo estimado de interacción.
+
+### 1. Generar Product Backlog
+**Prompt:**
 > Actúa como Product Owner experto en juegos educativos. Genera un Product Backlog para un juego de preguntas multijugador, usando base de datos no relacional y funcionalidades de IA. Prioriza las historias y estima el esfuerzo en puntos de historia.
+**Tiempo empleado:** 2 minutos
+
+### 2. Refinar Historias de Usuario
+**Prompt:**
+> Analiza y refina las historias de usuario del backlog para asegurar que sean claras, concisas y cumplan el formato Connextra. Sugiere mejoras en redacción, criterios de aceptación y pruebas sugeridas.
+**Tiempo empleado:** 3 minutos
+
+### 3. Sugerir Tareas Técnicas
+**Prompt:**
+> A partir del Product Backlog y las historias de usuario refinadas, sugiere las tareas técnicas necesarias para implementar cada historia. Incluye tareas de backend, frontend, integración con base de datos no relacional y uso de IA donde aplique.
+**Tiempo empleado:** 3 minutos
+
+---
+
+### Registro de Prompts y Tiempos de Interacción
+
+Cada interacción con la IA es registrada para fines de transparencia y mejora continua. Se recomienda documentar:
+- El prompt utilizado
+- La respuesta generada
+- El tiempo estimado de interacción
+
+**Ejemplo de registro:**
+
+| Fecha         | Prompt resumido                                 | Tiempo empleado | Valor añadido                |
+|--------------|-------------------------------------------------|----------------|------------------------------|
+| 2025-09-15   | Generar Product Backlog                          | 2 min          | Backlog inicial priorizado   |
+| 2025-09-15   | Refinar historias de usuario                     | 3 min          | Historias claras y completas |
+| 2025-09-15   | Sugerir tareas técnicas                          | 3 min          | Lista de tareas técnicas     |
+
+Se recomienda mantener este registro actualizado en el repositorio, preferiblemente en la sección de documentación o en un archivo dedicado (`docs/prompts.md`).
+
 
 ## Tecnologías Sugeridas
 - Backend: Node.js, Python o similar
