@@ -37,6 +37,10 @@ Este proyecto consiste en un MVP de un juego multijugador en el que los particip
 13. Como jugador, quiero ver el tiempo restante para responder cada pregunta.
 14. Como jugador, quiero ver el resumen de la partida al finalizar.
 
+
+> **Nota importante:**
+> El MVP descrito en este documento no requiere integración con servicios de IA para la generación de preguntas ni para el filtrado de categorías. Todas las funcionalidades principales pueden implementarse utilizando lógica tradicional y bases de datos no relacionales. La retroalimentación automática (ID 9) puede implementarse de forma básica, sin depender de IA externa.
+
 ## Product Backlog y Release Plan
 
 ## Product Backlog Inteligente
