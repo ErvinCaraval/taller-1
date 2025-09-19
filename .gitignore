@@ -93,7 +93,7 @@ temp/
 *.swo
 *~
 
-# OS generated files
+# OS generated file
 .DS_Store
 .DS_Store?
 ._*
